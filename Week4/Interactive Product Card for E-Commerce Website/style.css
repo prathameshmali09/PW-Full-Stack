@@ -1,0 +1,142 @@
+/* Global Styles */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Card Styles */
+.product-card{
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background-color: #f8f8f8;
+}
+.image-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image{
+    width: 100%;
+    height: auto;
+    transition: reansform 0.3s ease;
+    animation: fadeln 1s ease-out;
+}
+
+.product-details{
+    padding: 20px;
+}
+
+.product-name{
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    animation: slideIn 0.5s ease-out0.2s both;
+}
+
+.product-price{
+    font-size: 1.5rem;
+    color: #333 ;
+    margin-bottom: 10px;
+    animation: slideIn 0.5s ease-out 0.2s both;
+}
+
+.product-price{
+    font-size: 1.2rem;
+    color: #e74c3c;
+    font-weight: 600;
+    margin-bottom: 15px;
+    animation: slideIn 0.5s ease-out 0.4s both;
+}
+
+.product-description{
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+    display: none;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.product-card:hover .product-description{
+    display: block;
+}
+
+.add-to-cart{
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: slidein 0.5s ease ease-out 0.6 both;
+}
+
+.add-to-cart:hover{
+    background-color: #2980b9;
+}
+
+.add-to-cart:active{
+    transform: scale(0.95) ;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes slideIn {
+    form {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Button Click */
+@keyframes buttonClick {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+.add-to-cart:active{
+    animation : buttonclick 0.2s ease-out;
+}
+
